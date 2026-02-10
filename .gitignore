@@ -6,3 +6,4 @@ mbed-os.lib
 mbed_app.json
 mbed_settings.py
 .mbed
+cpy.sh
