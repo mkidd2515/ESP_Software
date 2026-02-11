@@ -8,7 +8,7 @@ mbed_settings.py
 .mbed
 cpy.sh
 .python-version
-# /QEI
 QEI.lib
 tags
 
+.hg/
