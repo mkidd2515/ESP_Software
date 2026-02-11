@@ -9,3 +9,5 @@ mbed_settings.py
 cpy.sh
 .python-version
 /QEI
+QEI.lib
+
