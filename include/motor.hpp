@@ -9,6 +9,7 @@ protected:
 	DigitalOut dirOut; // GPIO pin for setting direction
 	PwmOut pwm; // speed control of motor
 	QEI quad;  // reading the quad enc
+	Timer timer;
 	
 public:
 	Motor(PinName pin, int period_us, float duty, PinName chA, PinName chB);
