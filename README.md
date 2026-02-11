@@ -46,8 +46,6 @@ eval "$(pyenv virtualenv-init - bash)"
 
 - Set toolchain using cmd `mbed toolchain GCC_ARM`
 
-- Add the Quadrature Encoder Interface library to the mbed project by running `mbed add http://os.mbed.com/users/aberk/code/QEI/`
-
 - Compile the libraries with `mbed compile` (this'll take a minute)
 
 - You're now ready to start programming!
