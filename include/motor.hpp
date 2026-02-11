@@ -1,10 +1,8 @@
 #include "mbed.h"
-#include "<chrono>"
 #include "QEI.h"
 
 class Motor {
 protected:
-	bool dir; // motor turning direction
 	float dutyCycle; // percentage 
 	int period; // in microseconds
 	DigitalOut dirOut; // GPIO pin for setting direction
@@ -13,11 +11,13 @@ protected:
 	Timer timer;
 	
 public:
-	Motor(PinName pin, int period_us, float duty, PinName chA, PinName chB);
+	Motor(PinName dirPin, PinName pwmPin, int period_us, float duty, PinName chA, PinName chB);
 	
-	int get_speed();
-	
+	void set_dir(int newD);
+	int get_dir(void);
+
+	int get_speed(void);
 	void set_speed(float speed); // input speed as percentage but might switch to RPM
 	
-
+	int 
 };
