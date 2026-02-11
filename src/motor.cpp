@@ -1,6 +1,8 @@
 #include "mbed.h"
 #include "QEI.h"
+#include <chrono>
 #include "motor.hpp"
+
 
 // FYI constructor not complete 
 Motor::Motor(PinName pwmPin, int period_us, float duty, PinName chA, PinName chB) 
@@ -24,5 +26,6 @@ int get_speed() {
 	timer.start;
 	n0 = quad.getPulses();
 	wait(5 us)
+	wait(5 std::chronos::)
 }
 
