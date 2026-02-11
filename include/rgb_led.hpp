@@ -1,7 +1,6 @@
 #ifndef RGB_LED_HPP
 #define RGB_LED_HPP
 #include "mbed.h"
-#include <memory>
 
 
 
@@ -16,6 +15,7 @@ class RGB_Led {
     enum Colors {
       RED = 1, GREEN = 2, BLUE = 4
     };
+
     RGB_Led() noexcept;
     RGB_Led(const RGB_Led&) = delete;
     RGB_Led operator=(const RGB_Led&) = delete;
