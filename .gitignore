@@ -8,4 +8,10 @@ mbed_settings.py
 .mbed
 cpy.sh
 .python-version
+<<<<<<< HEAD
+=======
+QEI.lib
+tags
+>>>>>>> 57b2b4f6951daf1e8a2474a000dac03590a05d69
 
+.hg/

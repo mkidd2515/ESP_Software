@@ -2,6 +2,7 @@
 #include "QEI.h"
 #include <chrono>
 #include "motor.hpp"
+<<<<<<< HEAD
 
 // FYI constructor not complete 
 Motor::Motor(PinName dirPin, PinName pwmPin, int period_us, float duty, PinName chA, PinName chB) 
@@ -11,7 +12,6 @@ Motor::Motor(PinName dirPin, PinName pwmPin, int period_us, float duty, PinName 
 	   quad(chA, chB, NC, 256)
 {
 	pwm.period_us(period_us);
-	
 }
 
 void Motor::set_speed(float speed) {
@@ -27,6 +27,5 @@ int Motor::get_speed() {
 	wait(10ms);
 	n1 = quad.getPulses();
 	timer.stop;
-	
 }
 
