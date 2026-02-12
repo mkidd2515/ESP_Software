@@ -4,15 +4,13 @@
 
 // FYI constructor not complete 
 Motor::Motor(PinName dirPin, PinName pwmPin, int period_us, float duty, PinName chA, PinName chB) 
-		dutyCycle(duty),
+	:	dutyCycle(duty),
 	    period(period_us),
 	    dirOut(dirPin),
 	    pwm(pwmPin),
 	    quad(chA, chB, NC, 256)
 {
 	pwm.period_us(period_us);
-	t_prev = t_now = Kernel::get_ms_count();
-	pCntPrev = pCntNow = quad.getPulses();
 }
 
 void Motor::set_dir(int newD) {
@@ -48,6 +46,6 @@ float Motor::get_speed(void) {
 	timer.stop();
 	float speed = 0;
 	*/
-	
+	return 0.0f;	
 }
 

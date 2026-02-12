@@ -16,8 +16,6 @@ public:
 	void set_dir(int newD);
 	int get_dir(void);
 
-	int get_speed(void);
+	float get_speed(void);
 	void set_speed(float speed); // input speed as percentage but might switch to RPM
-	
-	int 
 };
