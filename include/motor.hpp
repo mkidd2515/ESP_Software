@@ -11,6 +11,8 @@
 
 static constexpr int TICKER_PERIOD_US = 100;
 
+static_assert((TICKER_PERIOD_US != 0), "Ticker period must be non 0 COMPILATION ERROR");
+
 
 class Motor {
 protected:
