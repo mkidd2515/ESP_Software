@@ -26,7 +26,7 @@ protected:
 	void calc_speed(void) noexcept;
 	
 public:
-	Motor(PinName dirPin, PinName pwmPin, int period_us, float duty, PinName chA, PinName chB) noexcept;
+	Motor(PinName dirPin, PinName pwmPin, int period_us, PinName chA, PinName chB) noexcept;
 	// delete misc constructors, OBJECT SHOULD NOT BE COPIED
 	Motor(const Motor&) = delete;
 	Motor operator=(const Motor&) = delete;
@@ -36,6 +36,7 @@ public:
 	void start() noexcept;	
 	void suspend() noexcept;
 	void resume() noexcept;
+        void stop() noexcept;
 
 	void set_dir(int newD) noexcept;
 	int get_dir(void) const noexcept;
