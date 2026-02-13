@@ -9,6 +9,8 @@
 // might be too fast to read
 static constexpr int TICKER_PERIOD_US = 100;
 
+static constexpr int MTR_PRD_US = 10; 
+
 static_assert((TICKER_PERIOD_US != 0), "Ticker period must be non 0 COMPILATION ERROR");
 
 
