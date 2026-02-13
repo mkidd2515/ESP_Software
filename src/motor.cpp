@@ -7,7 +7,8 @@
 // FYI constructor not complete 
 Motor::Motor(PinName dirPin, PinName pwmPin, int period_us, PinName chA, PinName chB) noexcept : 
   	    duty_cycle(0),
-	    period(period_us),
+	    pulse_count(0),
+        period(period_us),
 	    dirOut(dirPin),
 	    pwm(pwmPin),
 	    quad(chA, chB, NC, 256),

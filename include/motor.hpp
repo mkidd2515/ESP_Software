@@ -36,7 +36,7 @@ public:
 	void start() noexcept;	
 	void suspend() noexcept;
 	void resume() noexcept;
-        void stop() noexcept;
+    void stop() noexcept;
 
 	void set_dir(int newD) noexcept;
 	int get_dir(void) const noexcept;
