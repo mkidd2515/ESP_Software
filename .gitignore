@@ -1,4 +1,3 @@
-
 /__pycache__
 /BUILD
 /mbed-os
@@ -8,10 +7,8 @@ mbed_settings.py
 .mbed
 cpy.sh
 .python-version
-<<<<<<< HEAD
-=======
 QEI.lib
 tags
->>>>>>> 57b2b4f6951daf1e8a2474a000dac03590a05d69
-
 .hg/
+/Nucleo_F401RE_DS271_Battery_Monitor
+Nucleo_F401RE_DS271_Battery_Monitor.lib

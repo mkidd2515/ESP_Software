@@ -48,6 +48,10 @@ eval "$(pyenv virtualenv-init - bash)"
 
 - Compile the libraries with `mbed compile` (this'll take a minute)
 
+- Install the Battery Monitor Library `mbed add http://os.mbed.com/users/EmbeddedSam/code/Nucleo_F401RE_DS271_Battery_Monitor/`
+
+- Remove the main file in the library directory (as we're using this as just a library)
+
 - You're now ready to start programming!
 
 ## References: 
