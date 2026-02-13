@@ -1,13 +1,12 @@
 #include "mbed.h"
 #include "QEI.h"
 #include "motor.hpp"
-
 #include <chrono>
 
 
 // FYI constructor not complete 
-Motor::Motor(PinName dirPin, PinName pwmPin, int period_us, float duty, PinName chA, PinName chB) noexcept : 
-  	    dutyCycle(duty),
+Motor::Motor(PinName dirPin, PinName pwmPin, int period_us, PinName chA, PinName chB) noexcept : 
+  	    duty_cycle(0),
 	    period(period_us),
 	    dirOut(dirPin),
 	    pwm(pwmPin),
@@ -15,7 +14,7 @@ Motor::Motor(PinName dirPin, PinName pwmPin, int period_us, float duty, PinName 
 	    pulse_count(quad.getPulses())
 {
 	pwm.period_us(period_us);
-  	pulse_sampler.attach(callback(this, &Motor::calc_speed), std::chrono::microseconds(TICKER_PERIOD_US));
+	pulse_sampler.attach(callback(this, &Motor::calc_speed), std::chrono::microseconds(TICKER_PERIOD_US));
 }
 
 
@@ -28,6 +27,20 @@ void Motor::calc_speed(void) noexcept {
     pulse_count = current_pulses;
 }
 
+void Motor::stop() noexcept {
+	set_speed(0);
+	return;
+}
+
+void Motor::suspend() noexcept {
+	pwm.suspend();
+	return;
+}
+
+void Motor::resume() noexcept {
+	pwm.resume();
+	return;
+} 
 
 void Motor::set_dir(int newD) noexcept{
 	dirOut = static_cast<int>((newD != 0));
