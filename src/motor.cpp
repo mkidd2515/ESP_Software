@@ -4,7 +4,6 @@
 #include <chrono>
 
 
-// FYI constructor not complete 
 Motor::Motor(PinName dirPin, PinName pwmPin, int period_us, PinName chA, PinName chB) noexcept : 
   	    duty_cycle(0),
 	    pulse_count(0),
