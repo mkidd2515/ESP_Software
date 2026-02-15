@@ -2,7 +2,6 @@
 /BUILD
 /mbed-os
 mbed-os.lib
-mbed_app.json
 mbed_settings.py
 .mbed
 cpy.sh
@@ -12,4 +11,6 @@ tags
 .hg/
 /Nucleo_F401RE_DS271_Battery_Monitor
 Nucleo_F401RE_DS271_Battery_Monitor.lib
-22space.py
+22space.sh
+.clang-format
+

@@ -1,15 +1,12 @@
 #include "rgb_led.hpp"
 
-
-
-RGB_Led::RGB_Led() : red(D5), green(D9), blue(D8), 
-                     red_on(false), green_on(false), blue_on(false)
-{
+RGB_Led::RGB_Led()
+    : red(D5), green(D9), blue(D8), red_on(false), green_on(false),
+      blue_on(false) {
   red = 1;
   green = 1;
   blue = 1;
 }
-
 
 void RGB_Led::on(int col) noexcept {
   if (col & 1) {
@@ -73,18 +70,8 @@ void RGB_Led::toggle(void) noexcept {
   }
 }
 
-bool RGB_Led::get_status_red() const noexcept {
-  return red_on;
-}
+bool RGB_Led::get_status_red() const noexcept { return red_on; }
 
-bool RGB_Led::get_status_green() const noexcept {
-  return green_on;
-}
+bool RGB_Led::get_status_green() const noexcept { return green_on; }
 
-bool RGB_Led::get_status_blue() const noexcept {
-  return blue_on;
-}
-
-
-
-
+bool RGB_Led::get_status_blue() const noexcept { return blue_on; }
