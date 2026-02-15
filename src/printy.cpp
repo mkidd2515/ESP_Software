@@ -1,7 +1,7 @@
 #include "printy.hpp"
 
 
-Printy::Printy() noexcept : serial_out(USBTX, USBRX, 115200), precision(-1), base(Base::DEC) {}
+Printy::Printy() noexcept : serial_out(USBTX, USBRX, BAUD_RATE), precision(-1), base(Base::DEC) {}
 
 
 
